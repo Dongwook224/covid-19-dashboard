@@ -11,7 +11,7 @@ function makeConnectionLineGeometry( exporter, importer, value, type ){
 
 	//	how high we want to shoot the curve upwards
 	var anchorHeight = globeRadius + distanceBetweenCountryCenter * 0.7;
-
+	
 	//	start of the line
 	var start = exporter.center;
 
@@ -73,6 +73,7 @@ function makeConnectionLineGeometry( exporter, importer, value, type ){
 	
 	var size = (10 + Math.sqrt(val));
 	size = constrain(size,0.1, 60);
+	
 
 	//	create a line geometry out of these
 	var curveGeometry = THREE.Curve.Utils.createLineGeometry( points );

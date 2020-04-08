@@ -299,6 +299,7 @@ function initScene() {
 	buildGUI();
 
 	//selectVisualization( timeBins, '2010', ['UNITED STATES'], ['Military Weapons ','Civilian Weapons', 'Ammunition'], ['Military Weapons','Civilian Weapons', 'Ammunition'] );					
+	//selectVisualization( timeBins, '2010', ['Korea, Republic of'], ['Military Weapons ','Civilian Weapons', 'Ammunition'], ['Military Weapons','Civilian Weapons', 'Ammunition'] );					
 	selectVisualization( timeBins, '2010', ['Korea, Republic of'], [], [] );					
 	
 		// test for highlighting specific countries
@@ -341,7 +342,8 @@ function initScene() {
     //	-----------------------------------------------------------------------------
     //	Setup our camera
     camera = new THREE.PerspectiveCamera( 12, window.innerWidth / window.innerHeight, 1, 20000 ); 		        
-	camera.position.z = 1400;
+	//camera.position.z = 1400;
+	camera.position.z = customConfig.cameraPositionZ;
 	camera.position.y = 0;
 	camera.lookAt(scene.width/2, scene.height/2);	
 	scene.add( camera );	  

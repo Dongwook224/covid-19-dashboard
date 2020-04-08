@@ -94,7 +94,8 @@ function attachMarkerToCountry( countryName, importance ){
 		if( this.selected || this.hover )
 			zIndex = 10000;
 
-		this.setPosition( screenPos.x, screenPos.y, zIndex );	
+		this.setPosition( screenPos.x, screenPos.y, zIndex );
+		//setPositionOfCircle( screenPos.x, screenPos.y, zIndex );	
 	}
 
 	var nameLayer = marker.querySelector( '#countryText' );		
@@ -111,9 +112,8 @@ function attachMarkerToCountry( countryName, importance ){
 	// marker.nameLayer = nameLayer;
 	// marker.nameLayerText = countryName;
 	// marker.nameLayerShorten = country.countryCode;;	
-	var myNumber = Math.floor(Math.random() * 10000);
-	var importExportText = myNumber + '명';
-	//var importExportText = "";
+
+	var importExportText = "";
 	if(country.exportedAmount > 0 && country.importedAmount > 0) {
 	   importExportText += "imported:&nbsp;$" + numberWithCommas(country.importedAmount) + "<br />" +
 	       "exported:&nbsp;$"+numberWithCommas(country.exportedAmount);

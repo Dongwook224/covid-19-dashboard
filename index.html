@@ -6,8 +6,7 @@
 		<meta name="viewport" content="user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1">
 		<link rel="stylesheet" type="text/css" href="./css/font-awesome/css/all.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="custom.css">
-
+		<link rel="stylesheet" type="text/css" href="custom/custom.css">
 	</head>
 
 	<body onload="start()" id="dataviz" class="">
@@ -15,8 +14,7 @@
 		<div id="loading">
 			<h2>로딩중 ...</h2>
 		</div>
-
-		<div >
+		<div>
 			<table id="marker_template" class="marker" style="left:'0px';top:'0px'"><tr><td><span id="countryText" class="country">
 			</span></td><td class="detail" id="detailText">
 			<!--<span id="detailText" class="detail">
@@ -31,6 +29,7 @@
 			</div>
 		</div>
 
+		<script src="custom/custom.config.js"></script>
 		<script src="js/korean.js"></script>
 		
 		<script src="js/Detector.js"></script>
@@ -141,11 +140,60 @@
 
 		</script>
 
-		<div id="play-stop-button">
-			<i id="play-stop-icon" class="fas fa-stop" title="중지"></i>
+		<!-- Custom Elements -->		
+		<div id="custom-wrapper">
+			<!-- <div id="circle-wrapper">
+				<div id="circle"></div>
+			</div> -->
+			<div id="top-header">
+				<h1 class="title">국가별 코로나 현황
+					<div class="subtitle">업데이트: 2020-04-08, 15:00:00</div>
+				</h1>
+			</div>
+			
+			<div id="left-top">
+				<h1 id="top-title">한국</h1>
+			</div>
+
+			<div id="left-middle">
+				<div class="custom-title">
+					<img src="custom/images/bullet-mainsmall.png" alt="bullet-mainsmall">
+					확진자수
+				</div>
+				<div id="confirmed" class="custom-content">123,400</div>
+			</div>
+	
+			<div id="left-bottom">
+				<div class="custom-title">
+					<img src="custom/images/bullet-mainsmall.png" alt="bullet-mainsmall">
+					일별확진자수
+				</div>
+				<div class="custom-content"></div>
+			</div>
+
+			<div id="right-middle">
+				<div class="custom-title">
+					<img src="custom/images/bullet-mainsmall.png" alt="bullet-mainsmall">
+					확진자수
+				</div>
+				<div class="custom-content">123,400</div>
+			</div>
+	
+			<div id="right-bottom">
+				<div class="custom-title">
+					<img src="custom/images/bullet-mainsmall.png" alt="bullet-mainsmall">
+					일별확진자수
+				</div>
+				<div class="custom-content"></div>
+			</div>
+
+			<div id="play-stop-button">
+				<i id="play-stop-icon" class="fas fa-stop" title="중지"></i>
+			</div>
 		</div>
-		
-		<script src="js/custom.js"></script>
+		<!-- /Custom Elements -->
+		<script src="custom/lib/gsap/gsap.min.js"></script>
+		<script src="custom/custom.js"></script>
     </div>
 	</body>
 </html>

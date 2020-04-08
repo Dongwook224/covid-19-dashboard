@@ -616,15 +616,3 @@ Bar graph on left
     }
 }
 
-/* Custom CSS */
-#play-stop-button {
-    position: absolute;
-    right: 60px;
-    top: 30px;
-    cursor: pointer;
-}
-
-#play-stop-icon {
-    font-size: 44px;
-    color: #fff;
-}
