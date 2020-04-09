@@ -161,7 +161,7 @@
 
         var yFormat = d3.format(",");
 
-        d3.json("/custom/covid19.json").then( data => {
+        d3.json("custom/covid19.json").then( data => {
             var countries = Object.keys(data);
             var target = data[countries[0]];
             console.log(data);
